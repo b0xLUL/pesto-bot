@@ -230,11 +230,18 @@ const commands = [
 	.setName("council")
 	.setDescription("Shows the top 10 average power users across all checks from last month.")
 	.setDefaultMemberPermissions(PermissionFlagsBits.SendMessages),
+
 	//frank command
 	new SlashCommandBuilder()
 	.setName("frank")
 	.setDescription("Ouch, Rest In Pesto, Frank")
-	.setDefaultMemberPermissions(PermissionFlagsBits.SendMessages)
+	.setDefaultMemberPermissions(PermissionFlagsBits.SendMessages),
+
+	//save-streak command
+	new SlashCommandBuilder()
+		.setName("save-streak")
+		.setDescription("Lost your bb streak? You can save it here!")
+		.setDefaultMemberPermissions(PermissionFlagsBits.SendMessages),
 ];
 
 // Code from: https://discordjs.guide/creating-your-bot/command-deployment.html#guild-commands
@@ -244,7 +251,7 @@ const rest = new REST().setToken(process.env.BOT_TOKEN);
 	try {
 		const app_id = process.env.APP_ID;
 		const guild_id = process.env.GUILD_ID;
-		
+
 		await rest.put(Routes.applicationGuildCommands(app_id, guild_id), { body: commands });
 		console.log(`Successfully deployed ${commands.length} command(s) to ${process.env.GUILD_ID}.`);
 	} catch (err) {
