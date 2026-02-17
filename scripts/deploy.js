@@ -240,7 +240,7 @@ const commands = [
 	//save-streak command
 	new SlashCommandBuilder()
 		.setName("save-streak")
-		.setDescription("Lost your bb streak? You can save it here!")
+		.setDescription("Lost your bb streak? You can save it here! (Command sponsored by our Copium King)")
 		.setDefaultMemberPermissions(PermissionFlagsBits.SendMessages),
 ];
 
