@@ -242,6 +242,12 @@ const commands = [
 		.setName("save-streak")
 		.setDescription("Lost your bb streak? You can save it here! (Command sponsored by our Copium King)")
 		.setDefaultMemberPermissions(PermissionFlagsBits.SendMessages),
+
+	//bibicheck command
+	new SlashCommandBuilder()
+		.setName("bibicheck")
+		.setDescription("Check if bibi is live")
+		
 ];
 
 // Code from: https://discordjs.guide/creating-your-bot/command-deployment.html#guild-commands
