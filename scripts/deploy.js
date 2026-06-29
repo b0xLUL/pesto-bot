@@ -247,6 +247,7 @@ const commands = [
 	new SlashCommandBuilder()
 		.setName("bibicheck")
 		.setDescription("Check if bibi is live")
+		.setDefaultMemberPermissions(PermissionFlagsBits.SendMessages),
 		
 ];
 

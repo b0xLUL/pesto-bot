@@ -4,6 +4,13 @@ export async function run(client, interaction) {
 
     await interaction.deferReply();
 
+    if (interaction.channelId !== 1454555546807046164) {
+        console.log("blllllllllllllllls")
+        return await interaction.editReply({
+                content: "NOPE!"
+            })
+    }
+
     //try to get the streaminformation from the Twitch API
     try {
         const response = await fetch("https://api.twitch.tv/helix/streams?user_login=bibi_fiore&type=all", {
@@ -43,5 +50,5 @@ export async function run(client, interaction) {
 }
 
 async function refreshTwitchOauthToken() {
-    
+
 }
